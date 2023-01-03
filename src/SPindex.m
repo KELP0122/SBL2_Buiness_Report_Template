@@ -1,0 +1,11 @@
+clear;
+clc;
+df = readtable('OilPrice.xlsx','sheet',2);
+x = datetime(df{:,1});
+y = df{:,2};
+y1 = df{:,3};
+yyaxis left;
+plot(x,y,LineWidth=1);
+yyaxis right;
+plot(x,y1,LineWidth=1);
+legend('Barrel Price $',"S&P Index");
